@@ -1,0 +1,33 @@
+{
+  "name": "matroid_seminar",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/theme-default": "latest",
+    "@slidev/theme-seriph": "^0.25.0",
+    "vue": "^3.5.13",
+    "slidev-theme-neversink": "^0.3.6"
+  },
+  "version": "1.0.0",
+  "description": "To start the slide show:",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NobutakaShimizu/matroid_seminar.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NobutakaShimizu/matroid_seminar/issues"
+  },
+  "homepage": "https://nobutakashimizu.github.io/matroid_seminar/",
+  "devDependencies": {
+    "@slidev/cli": "^51.4.0"
+  }
+}
