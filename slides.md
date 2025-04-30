@@ -7,7 +7,7 @@ layout: cover
 # some information about your slides (markdown enabled)
 title: マトロイドのエクスパンダー性
 info: |
-  ## Slide of my talk at [Hokkaido University Matroid Seminar](https://sites.google.com/view/matroid-seminar/), held at March 28
+
 
 # https://sli.dev/features/drawing
 drawings:
@@ -30,103 +30,7 @@ themeConfig:
 
 # マトロイドのエクスパンダー性
 
-@北海道大学マトロイドセミナー
-
   [清水 伸高](https://sites.google.com/view/nobutaka-shimizu/home) (東京科学大学)
-  <div class="absolute bottom-5 right-5">
-    <QRCode value="https://nobutakashimizu.github.io/matroid_seminar/" :size="120" render-as="svg"/>
-  </div>
-
----
-layout: top-title
-color: amber-light
----
-
-::title::
-
-# 理論計算機科学 (Theoretical Computer Science; TCS)
-
-::content::
-
-#### 計算機の理論的な能力やその限界を数学を使って解明 (応用数学)
-
-- 数学「四色定理によれば地図は4色で塗れる」
-
-- TCS「具体的な色分けはどれくらいの手間 (演算回数) で見つかるか?」
-
-<v-click>
-
-#### 研究範囲 (ごく一部)
-
-- 最適化アルゴリズム
-- 計算量下界
-- 暗号
-- 誤り訂正符号
-- マルコフ連鎖
-
-数学の様々な概念が応用される
-
-</v-click>
-
----
-layout: top-title
-color: amber-light
----
-
-::title::
-
-# TCSと純粋数学のつながり
-
-::content::
-
-<div class="flex justify-center">
-<img src="/images/TCS_and_math.svg" alt="TCSと純粋数学の関係" class="w-170"/>
-</div>
-
-<div class="caption">
-  マトロイドはTCSと純粋数学の間の架け橋の一つ
-</div>
-
-
----
-layout: top-title-two-cols
-color: amber-light
----
-
-::title::
-
-# 諸分野におけるマトロイド
-
-
-::left::
-
-### 理論計算機科学
-
-- 効率的に解ける組合せ最適化問題の性質の抽象化
-  - 貪欲法
-  - マトロイド交叉
-
-- 効率的にサンプリング(数え上げ)できる離散構造の性質の抽象化
-  - 高次元エクスパンダー (**今日の話**)
-  - 母関数の対数凹性 (重み付きへの拡張)
-
-::right::
-
-### 純粋数学
-
-- グラフに付随する不変量の一般化
-  - ランク多項式
-- 線形部分空間や超平面配置の組合せ的性質の抽出
-  - 有向マトロイド
-::default::
-
-<div class="remark mx-20">
-
-マトロイドは研究対象の「扱いやすい」性質を抽象化した時に見えてくることが多い.
-
-</div>
-
-
 
 
 ---
@@ -136,7 +40,7 @@ color: amber-light
 
 ::title::
 
-# 今日の話題: エクスパンダー性
+# エクスパンダー性
 
 ::content::
 
