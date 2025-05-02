@@ -44,7 +44,7 @@ color: amber-light
 
 ::content::
 
-- エクスパンダー性の単体複体への自然な拡張
+- エクスパンダー性を持つ単体複体
 
 <v-clicks>
 
