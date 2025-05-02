@@ -40,39 +40,15 @@ color: amber-light
 
 ::title::
 
-# エクスパンダー性
-
-::content::
-
-- ランダムウォークが早く「混ざり合う」ことを保証する性質
-
-<v-clicks>
-
-- 計算量理論の擬似ランダムネスの文脈における非常に重要な道具
-  - 誤り訂正符号の構成, PCP定理の証明, 擬似乱数生成器の構成
-- 私の研究におけるエクスパンダー性の応用
-  - 平均時計算量の困難性増幅 <a href="https://dl.acm.org/doi/10.1145/3564246.3585189" target="_blank" class="cite-reference">Hirahara and S, STOC'23</a>
-  - 埋め込みクリーク問題の最適な探索から判定への帰着 <a href="https://dl.acm.org/doi/10.1145/3618260.3649751" target="_blank" class="cite-reference">[Hirahara and S, STOC'24]</a>
-  - 行列積アルゴリズムの誤り訂正 <span class="cite-reference"> [Hirahara and S, STOC'25] </span>
-
-</v-clicks>
-
----
-layout: top-title
-color: amber-light
----
-
-::title::
-
 # 高次元エクスパンダー
 
 ::content::
 
-- エクスパンダー性は元々はグラフの性質だが, 近年は単体複体に拡張 (高次元エクスパンダー)
+- エクスパンダー性の単体複体への自然な拡張
 
 <v-clicks>
 
-- 計算量理論と誤り訂正符号におけるブレイクスルー
+- 計算量理論と誤り訂正符号における重要な結果の立役者
   - PCP定理のパラメータ改善 <span class="cite-reference">\[Bafna, Minzer, Vyas, Yun, STOC'25]</span>
   - 立方複体に基づく量子誤り訂正符号 <a href="https://dl.acm.org/doi/10.1145/3519935.3520024" class="cite-reference">\[Dinur, Evra, Livne, Lubotzky, Mozes, STOC'22\]</a><a href="https://dl.acm.org/doi/10.1145/3519935.3520017" class="cite-reference">\[Panteleev, Kalachev, STOC'22\]</a>
   - マトロイドの基の数え上げ <a href="https://projecteuclid.org/journals/annals-of-mathematics/volume-199/issue-1/Log-concave-polynomials-II--High-dimensional-walks-and-an/10.4007/annals.2024.199.1.4.short" class="cite-reference">\[Anari, Liu, Gharan, Vinzant, Ann. of Math.(2024)\]</a>
@@ -222,6 +198,8 @@ color: amber-light
 <div class="remark">
 
 TCSの多くの文脈では正則グラフの性質としてエクスパンダー性を定義するが, 一般に遷移確率行列$P$の性質としても定義できる.
+ランダムウォークの文献だとrapid mixingと呼ぶこともある.
+
 </div>
 
 ---
@@ -418,10 +396,6 @@ color: amber-light
 <img src="/images/triangle_complex.svg" alt="三角形複体の図" class="w-80"/>
 </div>
 
-<div class="caption">
-  三角形複体は純粋.
-</div>
-
 ---
 layout: top-title
 color: amber-light
@@ -613,7 +587,7 @@ color: amber-light
 $$
   \begin{align*}
     \Pdown_i(\tau,\sigma) =\begin{cases}
-    \frac{1}{i+2} & \text{if }\sigma\subset\tau,\\
+    \frac{1}{i+1} & \text{if }\sigma\subset\tau,\\
     0 & \text{otherwise}.
     \end{cases}
   \end{align*}
@@ -693,7 +667,7 @@ $$
   \begin{align*}
     \Pup_i(\sigma,\tau)  = 
     \begin{cases}
-    \frac{\pi_{i+1}(\tau)}{(i+2)\pi_i(\sigma)} & \text{if }\sigma\subset\tau,\\
+    \frac{\pi_{i}(\tau)}{(i+2)\pi_i(\sigma)} & \text{if }\sigma\subset\tau,\\
     0 & \text{otherwise}.
     \end{cases}
   \end{align*}
@@ -1006,7 +980,7 @@ color: amber-light
 
 特に, 三角形を持たないので(三角形複体は)局所エクスパンダー性は持たない.
 
-例: <a href="https://link.springer.com/article/10.1007/BF02126799" class="cite-reference">[Lubotzky, Phillips, Sarnak, Combinatorica, 1988]</a>
+例: <a href="https://link.springer.com/article/10.1007/BF02126799" class="cite-reference">\[Lubotzky, Phillips, Sarnak, Combinatorica, 1988\]</a>
 
 
 ::right::
@@ -1019,7 +993,7 @@ color: amber-light
 
 たくさんの三角形が均一に散らばっていて, かつ辺を共有する三角形もたくさんある.
 
-例:<a href="https://www.sciencedirect.com/science/article/pii/S019566980400099X?via%3Dihub" class="cite-reference">[Lubotzky, Samuels, Vishne, 2005]</a>によるラマヌジャン複体は局所的にはBruhat-Tits building (無限$d$-正則木の高次元版)
+例:<a href="https://www.sciencedirect.com/science/article/pii/S019566980400099X?via%3Dihub" class="cite-reference">\[Lubotzky, Samuels, Vishne, 2005\]</a>によるラマヌジャン複体は局所的にはBruhat-Tits building (無限$d$-正則木の高次元版)
 
 ---
 layout: top-title
@@ -1032,7 +1006,7 @@ color: amber-light
 
 ::content::
 
-局所エクスパンダー $\Rightarrow$ 大域エクスパンダーが成り立つ <a href="https://link.springer.com/article/10.1007/s00493-019-3847-0" class="cite-reference">[Kaufman, Oppenheim, Combinatorica, 2020]</a>
+局所エクスパンダー $\Rightarrow$ 大域エクスパンダーが成り立つ <a href="https://link.springer.com/article/10.1007/s00493-019-3847-0" class="cite-reference">\[Kaufman, Oppenheim, Combinatorica, 2020\]</a>
 
 - 局所エクスパンダー : 三角形がどの局所的な部分を見ても均一に分散
 - 大域エクスパンダー : 三角形上の上昇下降ランダムウォークが高速に収束
@@ -1382,9 +1356,9 @@ color: amber-light
 
 ::content::
 
-- 情報理論的な下界により, 決定的アルゴリズムの質問回数は少なくとも$2^{\Omega(n)}$ <a href="https://www.sciencedirect.com/science/article/abs/pii/002001909490037X" class="cite-reference">Azar, Broder, Frieze, IPL 1994</a>
+- 情報理論的な下界により, 決定的アルゴリズムの質問回数は少なくとも$2^{\Omega(n)}$ <a href="https://www.sciencedirect.com/science/article/abs/pii/002001909490037X" class="cite-reference">\[Azar, Broder, Frieze, IPL 1994\]</a>
   - 答えの$2^{n/(\log n)^2}$倍以内の近似値すら求められない
-- 有限体上の線形マトロイドの基の数え上げは$\#\mathsf{P}$-困難 <a href="https://www.combinatorics.org/ojs/index.php/eljc/article/view/v19i4p41" class="cite-reference">Snook, Electron. J. Comb. 2012</a>
+- 有限体上の線形マトロイドの基の数え上げは$\#\mathsf{P}$-困難 <a href="https://www.combinatorics.org/ojs/index.php/eljc/article/view/v19i4p41" class="cite-reference">\[Snook, Electron. J. Comb. 2012\]</a>
   - $\#\mathsf{P}$-困難: $\mathsf{NP}$困難以上に難しく, 多項式時間では解けないと信じられている
 
 <div class="topic-box">
@@ -1535,7 +1509,7 @@ color: amber-light
 
 ::content::
 
-- <a href="https://www.sciencedirect.com/science/article/pii/030439758690174X" class="cite-reference">[Jerrum, Valiant, Vazirani, TCS, 1986]</a>は, 離散構造の再帰的な性質とMCMCを組み合わせたアプローチを提案.
+- <a href="https://www.sciencedirect.com/science/article/pii/030439758690174X" class="cite-reference">\[Jerrum, Valiant, Vazirani, TCS, 1986\]</a>: 離散構造の再帰的な性質とMCMCを組み合わせるアプローチ
 
 <div class="topic-box">
 
@@ -1566,6 +1540,76 @@ color: amber-light
 
 ::title::
 
+# 近年の研究動向
+
+::content::
+
+### 一様分布から重み付きへの拡張
+
+<v-clicks>
+
+- $d$次単体複体$X=(V,\calF)$と$X(d)$上の分布$\pi\in[0,1]^{X(d)}$に対し, 母関数
+
+$$
+  \begin{align*}
+    g_X(x_1,\dots,x_n) := \sum_{\sigma\in X(d)} \pi(\sigma)\prod_{i\in\sigma} x_i
+  \end{align*}
+$$
+
+が${}^{\forall} x\in \Real_{>0}^n$で**対数凹性**を持つ (i.e., $\nabla^2\log g_X(x)$が${}^{\forall}x\in\Real_{>0}^n$で半負定値) $\Rightarrow$ $X$が局所$0$-エクスパンダー <a href="https://projecteuclid.org/journals/annals-of-mathematics/volume-199/issue-1/Log-concave-polynomials-II--High-dimensional-walks-and-an/10.4007/annals.2024.199.1.4.short" class="cite-reference">\[Anari, Liu, Gharan, Vinzant, Ann. of Math.(2024)\]</a>
+- この拡張により, マトロイドのTutte多項式の(特定の領域内での評価値の)近似計算, Determinal Point Processのサンプリングが可能
+
+- **Lorenzian多項式**: 斉次多項式への一般化 <a href="https://annals.math.princeton.edu/2020/192-3/p04" class="cite-reference">\[Brändén, Huh, Ann. of Math.(2020)\]</a>
+  - Lorenzian多項式$p(x)=\sum_\alpha c_\alpha x^\alpha$ ($\alpha\in \mathbb{Z}_{\ge 0}^n$は成分和=$d$の中で動く) に対し, $c_\alpha\ne 0$なる$\alpha$全体はM凸集合 (マトロイドのmultiset版)
+
+
+</v-clicks>
+
+---
+layout: top-title
+color: amber-light
+---
+
+::title::
+
+# 余談: なぜ多項式の対数凹性が重要?
+
+::content::
+
+- 簡単のため, 変数$x_u$での偏微分を$\partial_u$と表し, 母関数$g_X(x)=\sum_{\sigma\in X(d)} \prod_{u\in \sigma}x_u$とする
+
+<v-clicks>
+
+- このとき, $\partial_u g_X(x) = \sum_{\sigma\in X(d),\sigma\ni u} \prod_{i\in \sigma\setminus\{u\}} x_i$ = リンク$X_{\{u\}}$の母関数
+  - すなわち, **母関数の偏微分 = リンクの母関数**
+- $\log g_X$を偏微分して$x=\mathbf{1}$を代入すると
+  
+  $$
+    \begin{align*}
+      \partial_i \log g_X (\mathbf{1}) = \frac{\partial_i g_X(\mathbf{1})}{g_X(\mathbf{1})} = \Pr_{\sigma\sim X(d)}[\sigma\ni i] 
+    \end{align*}
+  $$
+
+- 二回偏微分して$x=\mathbf{1}$を代入すると
+
+$$
+  \begin{align*}
+    \partial_i\partial_j \log g_X(\mathbf{1}) = \Pr_{\sigma\sim X(d)}[\sigma\supseteq\{i,j\}] - \Pr_{\sigma}[\sigma\ni i]\Pr_{\sigma}[\sigma\ni j]
+  \end{align*}
+$$
+  - これが$i\ne j$で負$\Rightarrow$ $i\in\sigma$と$j\in\sigma$は負の相関を持つ (balanced matroid) <a href="https://dl.acm.org/doi/10.1145/129712.129716" class="cite-reference">\[Feder, Mihail, STOC(1992)\]</a>
+  - 対数凹性は, これを$(i,j)$成分に持つ行列が半負定値であるという性質
+
+</v-clicks>
+
+
+---
+layout: top-title
+color: amber-light
+---
+
+::title::
+
 # まとめと展望
 
 ::content::
@@ -1573,8 +1617,7 @@ color: amber-light
 #### 単体複体上の高次元エクスパンダー性
 
 - グラフのエクスパンダー性は単体複体上に自然に拡張される
-- 局所エクスパンダー性：各面のリンクの骨格グラフが良いエクスパンダー性を持つ
-- 大域エクスパンダー性：単体複体上のランダムウォークの混交性
+- 局所エクスパンダー性と大域エクスパンダー性
 
 #### マトロイドとエクスパンダー性
 
@@ -1587,7 +1630,8 @@ color: amber-light
 #### 今後の(個人的)展望
 
 - より広いクラスの離散構造への拡張（e.g., マトロイド交叉)
-- 新しい誤り訂正符号の構成や平均時計算量への応用
-
+- マトロイドに基づくDerandomized Direct Product Theorem
+  - <a href="https://epubs.siam.org/doi/10.1137/080734030" class="cite-reference">\[Impagliazzo, Jaiswal, Kabanets, Wigderson, SICOMP, 2010\]</a>の拡張?
+   
 </v-click>
 
